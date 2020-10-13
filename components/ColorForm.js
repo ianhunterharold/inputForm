@@ -31,10 +31,9 @@ function ColorForm( {onNewColor = f => f} ){
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 10,
-        marginBottom: 5,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: 'white'
 
     },
     txtInput: {

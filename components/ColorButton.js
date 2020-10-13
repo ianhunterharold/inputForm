@@ -14,7 +14,7 @@ export default function ColorButton({
     <TouchableHighlight
       style={styles.button}
       onPress={() => onPress(backgroundColor)}
-      underlayColor="orange"
+      underlayColor= "green"
     >
       <View style={styles.row}>
         <View
