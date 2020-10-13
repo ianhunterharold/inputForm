@@ -1,19 +1,20 @@
 import React, { useState } from "react";
-import { View, StyleSheet, FlatList, Alert } from "react-native";
+import { StyleSheet, FlatList } from "react-native";
 import ColorButton from "./components/ColorButton";
-import defaultColors from './data/defaultColors.json';
 import ColorForm from './components/ColorForm';
+import { useColors } from './hooks.js';
 
 export default function App() {
   const [backgroundColor, setBackgroundColor] = useState("black");
+  const {colors, addColor } = useColors();
 
   return (
     <>
     <ColorForm 
-      onNewColor={newColor=> Alert.alert(`Add color: ${newColor}`)}
+      onNewColor={addColor}
     />
     <FlatList style={[styles.container, { backgroundColor }]} 
-    data = {defaultColors}
+    data = {colors}
     renderItem={ ({item}) => {
       return (
         <ColorButton key={item.id} backgroundColor={item.color} onPress={setBackgroundColor} />
