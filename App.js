@@ -11,10 +11,19 @@ const { Navigator, Screen } = createStackNavigator();
 export default function App(){
   return (
     <NavigationContainer>
-      <Navigator>
+      <Navigator 
+          screenOptions={{
+          headerStyle: {
+            height: 50,
+            backgroundColor:'white',    
+          }
+        }}
+      >
         <Screen 
         name="Home" 
-        options ={{title:'Color List'}}
+        options ={{
+          title:'Color List',
+        }}
         component={ColorList}
         />
         <Screen name="Details" component={ColorDetails} />
@@ -23,3 +32,4 @@ export default function App(){
     </NavigationContainer>
   )
 }
+

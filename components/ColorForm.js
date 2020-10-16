@@ -3,8 +3,10 @@ import { StyleSheet, View, TextInput, Button } from 'react-native';
 
 
 function ColorForm( {onNewColor = f => f} ){
+
     const [inputValue, setValue] = useState("");
     const input = useRef();
+
     return(
         <View style={styles.container}>
             <TextInput 
@@ -38,7 +40,7 @@ const styles = StyleSheet.create({
     },
     txtInput: {
         flex: 1,
-        borderWidth: 2,
+        borderWidth: 1,
         fontSize: 20,
         margin: 5,
         borderRadius: 5,

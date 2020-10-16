@@ -30,12 +30,12 @@ export default function ColorButton({
 
 const styles = StyleSheet.create({
   button: {
-    margin: 10,
+    margin: 1,
     padding: 10,
-    borderWidth: 2,
-    borderRadius: 10,
+    borderWidth: 1,
+    borderRadius: 5,
     alignSelf: "stretch",
-    backgroundColor: "rgba(255, 255, 255, 0.8)"
+    backgroundColor: "rgba(255, 255, 255, 1)"
   },
   buttonText: {
     fontSize: 30,
